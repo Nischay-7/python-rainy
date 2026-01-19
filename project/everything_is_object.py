@@ -51,7 +51,7 @@ def create_alias(original):
     # Step 1: Create an alias (a new variable pointing to the same object)
     # Step 2: Verify they reference the same object using check_same_object or id()
     alias = original
-    return alias, check_same_object(alias, original)
+    return (alias, check_same_object(alias, original))
 
 
 def break_alias(value):
@@ -130,7 +130,7 @@ def demonstrate_dynamic_typing():
     type_after_float = type(x)
     x = "meow"
     type_after_string = type(x)
-    return type_after_int, type_after_float, type_after_string
+    return (type_after_int, type_after_float, type_after_string)
 
 
 def check_if_none(identifier):
@@ -167,7 +167,7 @@ def explore_integer_class():
     """
     # TODO: Implement this function
     x = 7
-    return x, isinstance(x), int
+    return (x, isinstance(x), int)
 
 
 def explore_string_class():
@@ -187,7 +187,7 @@ def explore_string_class():
     """
     # TODO: Implement this function
     x = "meow"
-    return x, isinstance(x), str
+    return (x, isinstance(x), str)
 
 
 def get_class_blueprint(obj):
@@ -241,5 +241,5 @@ def get_object_info(obj):
     Hint: Use id(), type(), and return obj as the value.
     """
     # TODO: Implement this function
-    return id(obj), type(obj), obj
+    return (id(obj), type(obj), obj)
 
