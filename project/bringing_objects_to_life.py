@@ -31,8 +31,8 @@ def compare_literal_vs_constructor():
     # TODO: Implement this function
     x = 42
     y = int(42)
-    isSame = x == y
-    return x, y, isSame
+    isSame = (x == y)
+    return (x, y, isSame)
 
 def instantiate_list_with_items():
     """
