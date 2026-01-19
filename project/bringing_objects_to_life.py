@@ -105,9 +105,10 @@ def call_mutator_methods(data_list, item_to_add):
     # Step 2: Call .append(item_to_add) on the copy
     # Step 3: Call .sort() on the copy
     # Step 4: Return the modified copy
-    copy_data_list = list(data_list)
+    copy_data_list = data_list.copy()
     list_after_append = copy_data_list.append(item_to_add)
-    list_after_sort = copy_data_list.sort()
+    new_list = list_after_append.copy()
+    list_after_sort = new_list.sort()
     return (list_after_append, list_after_sort)
 
 
