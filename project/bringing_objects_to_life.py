@@ -73,7 +73,7 @@ def call_accessor_methods(data_list, value_to_count, text_string):
     count_result = data_list.count(value_to_count)
     upper_result = text_string.upper()
     lower_result = text_string.lower()
-    return count_result, upper_result, lower_result
+    return (count_result, upper_result, lower_result)
 
 
 def call_mutator_methods(data_list, item_to_add):
@@ -108,7 +108,7 @@ def call_mutator_methods(data_list, item_to_add):
     copy_data_list = list(data_list)
     list_after_append = copy_data_list.append(item_to_add)
     list_after_sort = copy_data_list.sort()
-    return list_after_append, list_after_sort
+    return (list_after_append, list_after_sort)
 
 
 
@@ -155,9 +155,7 @@ def process_list_of_strings(string_list):
     # Step 1: Convert all strings to uppercase
     # Step 2: Filter out empty strings
     # Step 3: Sort the result
-    copy_string_list = [item for item in string_list if item]
-    for item in copy_string_list:
-        item = item.upper()
+    copy_string_list = [item.upper() for item in string_list if item]
     copy_string_list.sort()
     return copy_string_list
 
