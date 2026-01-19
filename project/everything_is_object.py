@@ -165,7 +165,7 @@ def explore_integer_class():
     """
     # TODO: Implement this function
     x = 7
-    return (x, isinstance(x), int)
+    return (x, isinstance(x, int), int)
 
 
 def explore_string_class():
@@ -185,7 +185,7 @@ def explore_string_class():
     """
     # TODO: Implement this function
     x = "meow"
-    return (x, isinstance(x), str)
+    return (x, isinstance(x, str), str)
 
 
 def get_class_blueprint(obj):
