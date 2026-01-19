@@ -14,13 +14,13 @@ def check_grade(score):
     """
     # TODO: Fix the indentation errors in the if/elif/else blocks below
     if score >= 90:
-    return "A"
+        return "A"
     elif score >= 80:
-    return "B"
+        return "B"
     elif score >= 70:
-    return "C"
+        return "C"
     else:
-    return "F"
+        return "F"
 
 
 def print_numbers(n):
@@ -29,7 +29,7 @@ def print_numbers(n):
     """
     # TODO: Fix the indentation error in the for loop below
     for i in range(1, n + 1):
-    print(i)
+        print(i)
 
 
 def countdown(start):
@@ -39,8 +39,8 @@ def countdown(start):
     # TODO: Fix the indentation errors in the while loop below
     num = start
     while num > 0:
-    print(num)
-    num = num - 1
+        print(num)
+        num = num - 1
     print("Blast off!")
 
 
@@ -51,5 +51,8 @@ def is_even(number):
     """
     # TODO: Complete this function by adding if/else logic with correct indentation
     # Hint: Check if number % 2 == 0, return True if yes, False otherwise
-    pass
+    if number % 2 == 0:
+        return True
+    else:
+        return False
 
