@@ -29,8 +29,10 @@ def compare_literal_vs_constructor():
     4. Return all three values
     """
     # TODO: Implement this function
-    pass
-
+    x = 42
+    y = int(42)
+    isSame = x == y
+    return x, y, isSame
 
 def instantiate_list_with_items():
     """
@@ -42,7 +44,8 @@ def instantiate_list_with_items():
     Hint: Use literal form to create a list: [1, 2, 3]
     """
     # TODO: Implement this function
-    pass
+    numList = [1,2,3]
+    return numList
 
 
 def call_accessor_methods(data_list, value_to_count, text_string):
@@ -67,7 +70,10 @@ def call_accessor_methods(data_list, value_to_count, text_string):
     3. Use text_string.lower() to get lowercase version
     """
     # TODO: Implement this function
-    pass
+    count_result = data_list.count(value_to_count)
+    upper_result = text_string.upper()
+    lower_result = text_string.lower()
+    return count_result, upper_result, lower_result
 
 
 def call_mutator_methods(data_list, item_to_add):
@@ -99,7 +105,11 @@ def call_mutator_methods(data_list, item_to_add):
     # Step 2: Call .append(item_to_add) on the copy
     # Step 3: Call .sort() on the copy
     # Step 4: Return the modified copy
-    pass
+    copy_data_list = list(data_list)
+    list_after_append = copy_data_list.append(item_to_add)
+    list_after_sort = copy_data_list.sort()
+    return list_after_append, list_after_sort
+
 
 
 def chain_string_methods(text_string, char_to_replace, replacement_char):
@@ -118,7 +128,7 @@ def chain_string_methods(text_string, char_to_replace, replacement_char):
     Hint: Chain the methods: text_string.lower().strip().replace(char_to_replace, replacement_char)
     """
     # TODO: Implement this function
-    pass
+    return text_string.lower().strip().replace(char_to_replace, replacement_char)
 
 
 def process_list_of_strings(string_list):
@@ -145,8 +155,11 @@ def process_list_of_strings(string_list):
     # Step 1: Convert all strings to uppercase
     # Step 2: Filter out empty strings
     # Step 3: Sort the result
-    pass
-
+    copy_string_list = [item for item in string_list if item]
+    for item in copy_string_list:
+        item = item.upper()
+    copy_string_list.sort()
+    return copy_string_list
 
 def string_manipulation_chain(text_string):
     """
@@ -164,5 +177,5 @@ def string_manipulation_chain(text_string):
     Hint: Chain the methods: text_string.strip().lower().replace(' ', '_')
     """
     # TODO: Implement this function
-    pass
+    return text_string.strip().lower().replace(' ', '_')
 
