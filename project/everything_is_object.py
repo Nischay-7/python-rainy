@@ -26,9 +26,7 @@ def check_same_object(obj1, obj2):
     Hint: Use the id() function to get the identity of each object and compare them.
     """
     # TODO: Implement this function
-    if id(obj1) == id(obj2):
-        return True
-    return False
+    return id(obj1) == id(obj2)
 
 
 def create_alias(original):
