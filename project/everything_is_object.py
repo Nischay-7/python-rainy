@@ -26,7 +26,9 @@ def check_same_object(obj1, obj2):
     Hint: Use the id() function to get the identity of each object and compare them.
     """
     # TODO: Implement this function
-    pass
+    if id(obj1) == id(obj2):
+        return True
+    return False
 
 
 def create_alias(original):
@@ -48,7 +50,8 @@ def create_alias(original):
     # TODO: Implement this function
     # Step 1: Create an alias (a new variable pointing to the same object)
     # Step 2: Verify they reference the same object using check_same_object or id()
-    pass
+    alias = original
+    return alias, check_same_object(alias, original)
 
 
 def break_alias(value):
@@ -76,7 +79,12 @@ def break_alias(value):
     # Step 2: Store ids before reassignment
     # Step 3: Reassign alias to a new object (e.g., value + 1)
     # Step 4: Get id after reassignment
-    pass
+    alias = value
+    original_id = id(value)
+    alias_id_before = id(alias)
+    alias = value+1
+    alias_id_after = id(alias)
+    return (original_id, alias_id_before, alias_id_after)
 
 
 def get_object_type(obj):
@@ -92,7 +100,7 @@ def get_object_type(obj):
     Hint: Use the type() built-in function.
     """
     # TODO: Implement this function
-    pass
+    return type(obj)
 
 
 def demonstrate_dynamic_typing():
@@ -116,7 +124,13 @@ def demonstrate_dynamic_typing():
     # Step 1: Assign an integer to a variable, get its type
     # Step 2: Reassign to a float, get its type
     # Step 3: Reassign to a string, get its type
-    pass
+    x = 7
+    type_after_int = type(x)
+    x = 5.5
+    type_after_float = type(x)
+    x = "meow"
+    type_after_string = type(x)
+    return type_after_int, type_after_float, type_after_string
 
 
 def check_if_none(identifier):
@@ -133,7 +147,7 @@ def check_if_none(identifier):
           In Python, we use 'is None' or 'is not None' to check for None.
     """
     # TODO: Implement this function
-    pass
+    return identifier is None
 
 
 def explore_integer_class():
@@ -152,7 +166,8 @@ def explore_integer_class():
     3. Return the integer, the result of isinstance(), and the int class
     """
     # TODO: Implement this function
-    pass
+    x = 7
+    return x, isinstance(x), int
 
 
 def explore_string_class():
@@ -171,7 +186,8 @@ def explore_string_class():
     3. Return the string, the result of isinstance(), and the str class
     """
     # TODO: Implement this function
-    pass
+    x = "meow"
+    return x, isinstance(x), str
 
 
 def get_class_blueprint(obj):
@@ -189,7 +205,7 @@ def get_class_blueprint(obj):
     """
     # TODO: Implement this function
     # Hint: Use obj.__class__ to get the class
-    pass
+    return obj.__class__
 
 
 def check_class_relationship(obj, class_type):
@@ -206,7 +222,7 @@ def check_class_relationship(obj, class_type):
     Hint: Use isinstance(obj, class_type)
     """
     # TODO: Implement this function
-    pass
+    return isinstance(obj, class_type)
 
 
 def get_object_info(obj):
@@ -225,5 +241,5 @@ def get_object_info(obj):
     Hint: Use id(), type(), and return obj as the value.
     """
     # TODO: Implement this function
-    pass
+    return id(obj), type(obj), obj
 
