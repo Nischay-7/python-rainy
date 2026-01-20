@@ -129,7 +129,7 @@ def chain_string_methods(text_string, char_to_replace, replacement_char):
     Hint: Chain the methods: text_string.lower().strip().replace(char_to_replace, replacement_char)
     """
     # TODO: Implement this function
-    text_string.lower().strip().replace(char_to_replace, replacement_char)
+    text_string = text_string.lower().strip().replace(char_to_replace, replacement_char)
     return text_string
 
 
@@ -177,6 +177,6 @@ def string_manipulation_chain(text_string):
     Hint: Chain the methods: text_string.strip().lower().replace(' ', '_')
     """
     # TODO: Implement this function
-    text_string.strip().lower().replace(' ', '_')
+    text_string = text_string.strip().lower().replace(' ', '_')
     return text_string
 
