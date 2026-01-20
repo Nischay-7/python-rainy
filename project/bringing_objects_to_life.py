@@ -106,10 +106,10 @@ def call_mutator_methods(data_list, item_to_add):
     # Step 3: Call .sort() on the copy
     # Step 4: Return the modified copy
     copy_data_list = data_list.copy()
-    list_after_append = copy_data_list.append(item_to_add)
-    new_list = list_after_append.copy()
-    list_after_sort = new_list.sort()
-    return (list_after_append, list_after_sort)
+    copy_data_list.append(item_to_add)
+    new_list = copy_data_list.copy()
+    new_list.sort()
+    return (copy_data_list, new_list)
 
 
 
@@ -129,7 +129,8 @@ def chain_string_methods(text_string, char_to_replace, replacement_char):
     Hint: Chain the methods: text_string.lower().strip().replace(char_to_replace, replacement_char)
     """
     # TODO: Implement this function
-    return text_string.lower().strip().replace(char_to_replace, replacement_char)
+    text_string.lower().strip().replace(char_to_replace, replacement_char)
+    return text_string
 
 
 def process_list_of_strings(string_list):
@@ -176,5 +177,6 @@ def string_manipulation_chain(text_string):
     Hint: Chain the methods: text_string.strip().lower().replace(' ', '_')
     """
     # TODO: Implement this function
-    return text_string.strip().lower().replace(' ', '_')
+    text_string.strip().lower().replace(' ', '_')
+    return text_string
 
