@@ -129,7 +129,7 @@ def chain_string_methods(text_string, char_to_replace, replacement_char):
     Hint: Chain the methods: text_string.lower().strip().replace(char_to_replace, replacement_char)
     """
     # TODO: Implement this function
-    text_string = text_string.lower().strip().replace(char_to_replace, replacement_char)
+    text_string = text_string.lower().strip().replace(char_to_replace.lower(), replacement_char.lower())
     return text_string
 
 
